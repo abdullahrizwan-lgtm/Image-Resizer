@@ -1,0 +1,222 @@
+/* Image Resize Tool — Apple-glass approximation (tokens: <<NAME>>) */
+
+* {
+  font-family: <<FONT_FAMILY>>;
+  font-size: 13px;
+}
+
+/* Default label text follows theme (fixes plain QLabels like “Format”) */
+QLabel {
+  color: <<TEXT_PRIMARY>>;
+  background: transparent;
+}
+
+QLabel#AppearanceLabel {
+  color: <<TEXT_SECONDARY>>;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+}
+
+QScrollArea#MainScroll {
+  background: transparent;
+  border: none;
+}
+
+QScrollArea#MainScroll > QWidget > QWidget {
+  background: transparent;
+}
+
+#AppRoot {
+  background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 <<BG_TOP>>, stop:1 <<BG_BOTTOM>>);
+}
+
+QFrame#GlassCard {
+  background-color: <<GLASS_BG>>;
+  border: 1px solid <<GLASS_BORDER>>;
+  border-radius: 16px;
+}
+
+QLabel#HeroTitle {
+  color: <<TEXT_PRIMARY>>;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+QLabel#HeroSubtitle {
+  color: <<TEXT_SECONDARY>>;
+  font-size: 13px;
+}
+
+QLabel#HeroTitle[compact="true"] {
+  font-size: 20px;
+}
+
+QLabel#HeroSubtitle[compact="true"] {
+  font-size: 12px;
+}
+
+QLabel#SectionTitle {
+  color: <<TEXT_PRIMARY>>;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+QLabel#Caption {
+  color: <<TEXT_SECONDARY>>;
+  font-size: 11px;
+}
+
+QLabel#StatusLabel {
+  color: <<TEXT_SECONDARY>>;
+  font-size: 12px;
+  font-style: italic;
+}
+
+QLabel#StatusLabel[status="running"] {
+  color: <<ACCENT>>;
+  font-style: normal;
+  font-weight: 500;
+}
+
+QLabel#StatusLabel[status="done"] {
+  color: <<SUCCESS>>;
+  font-style: normal;
+  font-weight: 600;
+}
+
+QLabel#StatusLabel[status="error"] {
+  color: <<ERROR>>;
+}
+
+QLineEdit, QComboBox, QSpinBox {
+  background-color: <<FIELD_BG>>;
+  border: 1px solid <<FIELD_BORDER>>;
+  border-radius: 10px;
+  padding: 8px 12px;
+  min-height: 20px;
+  color: <<TEXT_PRIMARY>>;
+}
+
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+  border: 2px solid <<ACCENT>>;
+  padding: 7px 11px;
+}
+
+QComboBox::drop-down {
+  border: none;
+  width: 28px;
+}
+
+QComboBox QAbstractItemView {
+  background-color: <<FIELD_BG>>;
+  color: <<TEXT_PRIMARY>>;
+  border: 1px solid <<FIELD_BORDER>>;
+  border-radius: 8px;
+  padding: 4px;
+  outline: none;
+  selection-background-color: <<ACCENT>>;
+  selection-color: <<ACCENT_TEXT>>;
+}
+
+QPushButton {
+  background-color: <<BTN_SECONDARY_BG>>;
+  color: <<TEXT_PRIMARY>>;
+  border: 1px solid <<BTN_SECONDARY_BORDER>>;
+  border-radius: 10px;
+  padding: 8px 16px;
+  min-height: 20px;
+}
+
+QPushButton:hover {
+  background-color: <<BTN_SECONDARY_HOVER>>;
+}
+
+QPushButton#PrimaryButton {
+  background-color: <<ACCENT>>;
+  color: <<ACCENT_TEXT>>;
+  border: 1px solid <<ACCENT>>;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 12px 20px;
+  min-height: 24px;
+}
+
+QPushButton#PrimaryButton:hover {
+  background-color: <<ACCENT_HOVER>>;
+  border-color: <<ACCENT_HOVER>>;
+}
+
+QPushButton#PrimaryButton:disabled {
+  background-color: <<BTN_DISABLED_BG>>;
+  color: <<BTN_DISABLED_TEXT>>;
+  border-color: <<BTN_DISABLED_BORDER>>;
+}
+
+QPushButton#PresetButton {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+QProgressBar {
+  border: 1px solid <<FIELD_BORDER>>;
+  border-radius: 8px;
+  background-color: <<FIELD_BG>>;
+  text-align: center;
+  min-height: 14px;
+  color: <<TEXT_PRIMARY>>;
+}
+
+QProgressBar::chunk {
+  background-color: <<ACCENT>>;
+  border-radius: 7px;
+}
+
+QPlainTextEdit#ActivityLog {
+  background-color: <<LOG_BG>>;
+  border: 1px solid <<FIELD_BORDER>>;
+  border-radius: 10px;
+  padding: 10px;
+  color: <<TEXT_PRIMARY>>;
+  font-family: ui-monospace, "SF Mono", Menlo, Monaco, monospace;
+  font-size: 11px;
+}
+
+QScrollBar:vertical {
+  width: 10px;
+  background: transparent;
+  margin: 4px 2px 4px 0;
+}
+
+QScrollBar::handle:vertical {
+  background: <<SCROLL_HANDLE>>;
+  border-radius: 5px;
+  min-height: 28px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+  height: 0;
+}
+
+QSplitter::handle {
+  background: <<SPLITTER_HANDLE>>;
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+QSplitter::handle:horizontal {
+  width: 6px;
+  margin: 8px 2px;
+}
+
+QSplitter::handle:vertical {
+  height: 6px;
+  margin: 2px 8px;
+}
